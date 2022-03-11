@@ -12,6 +12,7 @@ def traverse(root):
     queue = deque()
     queue.append(root)
 
+    # boundaries: clearly only while there is a queue
     while queue:
         levelSize = len(queue)
         current_level = []

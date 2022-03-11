@@ -1,12 +1,16 @@
-def cyclic_sort(nums):
-  i = 0
-  while i < len(nums):
-    j = nums[i] - 1
-    if nums[i] != nums[j]:
-      nums[i], nums[j] = nums[j], nums[i]  # swap
-    else:
-      i += 1
-  return nums
+    def cyclic_sort(nums):
+    i = 0
+    while i < len(nums):
+        # store value in position in its own variable 
+        j = nums[i] - 1
+
+        # if i and j are not equal, it means that the right value is not in the position
+        # note that this step continues to happen until the correct value is in the right position
+        if nums[i] != nums[j]:
+            nums[i], nums[j] = nums[j], nums[i]  # swap
+        else:
+            i += 1
+    return nums
 
 
 def main():
